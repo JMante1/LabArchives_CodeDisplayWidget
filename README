@@ -1,0 +1,2 @@
+Currently, this supports python and javascript. Simply copy and paste the "snippet" of code into the box and enter it into your notebook. If more code languages are required add them to the array jljs.configure({language:["python", "javascript"]}. Other available languages are found at https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md.
+Alternative styles can be chosen by editing the html link currently stating atom-one-dark. Find alternatives using: view-source:https://highlightjs.org/static/demo/ 
