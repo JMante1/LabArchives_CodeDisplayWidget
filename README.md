@@ -13,8 +13,9 @@ The names to put in the code are:
 
 Current: Atom One Dark	atom-one-dark.min.css
 
+
 | Name | Code to use |
------------------------
+---------------------
 | Atom One Dark | atom-one-dark.min.css |
 | A 11 Y Dark | a11y-dark.min.css |
 | A 11 Y Light | a11y-light.min.css |
