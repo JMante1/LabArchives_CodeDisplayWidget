@@ -4,15 +4,14 @@ This is a widget to display code for LabArchives. Use it by pasting the "snippet
 
 
 # Simple Edits
-If more code languages are required add them to the array hljs.configure({language:["python", "javascript"]}.
+If more code languages are required add them to script_code the array hljs.configure({language:["python", "javascript"]}.
 Other available languages are found at https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md.
-Alternative styles can be chosen by editing the html link at the top of the document. Note the background colour must be changed seperately.
+Alternative styles can be chosen by editing the html link at the top of the document. Note the background colour must be changed seperately ()
+
 Find alternatives using: https://highlightjs.org/static/demo/
 
-The names to put in the code are:
-
 Current: Atom One Dark:	atom-one-dark.min.css
-See html line: 
+See html_code line: <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/atom-one-dark.min.css" rel="stylesheet" />
 
 
 | Name | Code to use |
