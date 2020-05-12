@@ -6,7 +6,7 @@
 		</tr>
 		<tr>
 			<td><textarea cols="40" id="doc_url" name="doc_url_mandatory" rows="5" type="text" value=""></textarea></td>
-			<td>For Widget help, click <a href="https://github.com/JMante1/GithubWidget" target="_blank">here</a>.</td>
+			<td>For Widget help, click <a href="https://github.com/JMante1/LabArchives_CodeDisplayWidget" target="_blank">here</a>.</td>
 		</tr>
 	</tbody>
 </table>
