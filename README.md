@@ -1,4 +1,4 @@
-This is a widget to display code for LabArchives. Use it by pasting the "snippet" of code into the box and enter it into your notebook. Currently, this supports python and javascript. 
+This is a widget to display code for LabArchives. Use it by pasting the "snippet" of code into the box and enter it into your notebook. Currently, this supports python and javascript. It is based on highlight.js (https://highlightjs.org/)
 
 # Install
 Open the Widgets manager in LabArchives. Create a new custom widget. Paste html_code in Widgeth Html editor Source, and the script_code in the script editor (make sure both are blank before pasting any code in).
