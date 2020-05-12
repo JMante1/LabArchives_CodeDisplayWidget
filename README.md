@@ -1,12 +1,17 @@
 This is a widget to display code for LabArchives. Use it by pasting the "snippet" of code into the box and enter it into your notebook. Currently, this supports python and javascript. 
 
 # Install
-
+Open the Widgets manager in LabArchives. Create a new custom widget. Paste html_code in Widgeth Html editor Source, and the script_code in the script editor (make sure both are blank before pasting any code in).
 
 # Simple Edits
+## Adding more languages
 If more code languages are required add them to script_code the array hljs.configure({language:["python", "javascript"]}.
 Other available languages are found at https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md.
-Alternative styles can be chosen by editing the html link at the top of the document. Note the background colour must be changed seperately ()
+
+## Adding different display styles
+Alternative styles can be chosen by editing the html link at the top of the document.
+
+Note the background colour must be changed seperately in script_code: html_code = '<div style="background-color: #282c34"><pre><code>'+doc_url+'</code></pre></div>'.
 
 Find alternatives using: https://highlightjs.org/static/demo/
 
