@@ -11,7 +11,7 @@ Other available languages are found at https://github.com/highlightjs/highlight.
 ## Adding different display styles
 Alternative styles can be chosen by editing the html link at the top of the document.
 
-Note the background colour must be changed seperately in script_code: html_code = '<div style="background-color: #282c34"><pre><code>'+doc_url+'</code></pre></div>'.
+Note the background colour must be changed seperately in script_code: html_code = \'<div style="background-color: #282c34"><pre><code>\'+doc_url+\'</code></pre></div>\'.
 
 Find alternatives using: https://highlightjs.org/static/demo/
 
