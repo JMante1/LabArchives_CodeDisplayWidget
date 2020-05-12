@@ -5,18 +5,18 @@ Open the Widgets manager in LabArchives. Create a new custom widget. Paste html_
 
 # Simple Edits
 ## Adding more languages
-If more code languages are required add them to script_code the array hljs.configure({language:["python", "javascript"]}.
+If more code languages are required add them to script_code the array `hljs.configure({language:["python", "javascript"]}.`
 Other available languages are found at https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md.
 
 ## Adding different display styles
 Alternative styles can be chosen by editing the html link at the top of the document.
 
-Note the background colour must be changed seperately in script_code: html_code = \'<div style="background-color: #282c34"><pre><code>\'+doc_url+\'</code></pre></div>\'.
+Note the background colour must be changed seperately in script_code: html_code = `'<div style="background-color: #282c34"><pre><code>'+doc_url+'</code></pre></div>'.`
 
 Find alternatives using: https://highlightjs.org/static/demo/
 
 Current: Atom One Dark:	atom-one-dark.min.css
-See html_code line: <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/atom-one-dark.min.css" rel="stylesheet" />
+See html_code line: `<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/atom-one-dark.min.css" rel="stylesheet" />`
 
 
 | Name | Code to use |
