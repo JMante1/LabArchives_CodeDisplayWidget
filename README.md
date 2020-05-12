@@ -11,12 +11,9 @@ Find alternatives using: https://highlightjs.org/static/demo/
 
 The names to put in the code are:
 
-Current: Atom One Dark	atom-one-dark.min.css
+Current: Atom One Dark:	atom-one-dark.min.css
+See html line: 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
 
 | Name | Code to use |
 |-------|--------------|
