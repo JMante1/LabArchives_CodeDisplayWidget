@@ -16,7 +16,7 @@ my_widget_script =
     $("div,table").css({"font-family":"Arial, Helvetica, sans-serif","font-size":"11px", "background-color": "#eeeeee"});
     $("#doc_url").change(function () {
   	  if (my_widget_script.is_valid(false).length == 0) {
-        my_widget_script.fetch_mo();
+        my_widget_script.show_doc();
       }
     });
     // In view mode, we don't show the input box
@@ -25,7 +25,7 @@ my_widget_script =
     }
     this.parent_class.init(mode, json_data);
   	if (my_widget_script.is_valid(true).length == 0) {
-      my_widget_script.fetch_mo();
+      my_widget_script.show_doc();
 
     }
   },
@@ -68,7 +68,7 @@ my_widget_script =
     
   	if (errors.length < 1) {
       // Verify that this is a google docs
-      if (doc_url.search(/^(<iframe\s+src=")?https:\/\/github\.com\//i) == -1) {
+      if (doc_url.search(/^(<iframe\s+src=")?https:\/\/github\.com\//i) != -1) {
       	if (!b_suppress_message) {
   	      $("#doc").html('<span style="color:red">Invalid Google Docs link. Please try again.</span>');
   	    }
@@ -91,29 +91,25 @@ my_widget_script =
     return this.parent_class.reset_edited();
   },
   
-  
-  fetch_mo:function(){
-        fetch('https://api.github.com/repos/ileathan/hubot-mubot/contents/src/mubot.coffee')
-    	 .then(function(response) {
-            return response.json();
-        }).then(function(data) {
-           text_exciting = 'data:text/html;base64,' + encodeURIComponent(data['content']);
-           my_widget_script.show_doc(text_exciting)
-         });},
-  
-  show_doc:function (text1) {
+
+ 
+  show_doc:function () {
 	var doc_url = $("#doc_url").val();
 	var html_code = doc_url;
     
+    hljs.configure({languages:["python"]})
        
 	// If the link is not in an iframe, put it in one
 	if (doc_url.search(/<iframe/i) == -1) {
+      html_code = '<pre>'+doc_url+'</pre>'
       //html_code = '<div>'+text1+'</div>'
-      html_code = '<iframe id = "github-iframe" src="'+text1+'" style="border:0" width="800" height="600" frameborder="0" scrolling="auto"></iframe>'
-	      }
+      //html_code = '<iframe id = "github-iframe" src="'+text1+'" style="border:0" width="800" height="600" frameborder="0" scrolling="auto"></iframe>'
+	  //html_code = '<div src="http://gist-it.appspot.com/https://github.com/ileathan/hubot-mubot/blob/master/src/mubot.coffee"><\div>'
+        }
     
 
 	$("#doc").html(html_code);
+    hljs.highlightBlock(document.querySelector("#doc"))
     my_widget_script.parent_class.resize_container();
   }
 }
