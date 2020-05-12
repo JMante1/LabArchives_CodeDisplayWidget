@@ -97,11 +97,11 @@ my_widget_script =
 	var doc_url = $("#doc_url").val();
 	var html_code = doc_url;
     
-    hljs.configure({languages:["python"]})
+    hljs.configure({languages:["python", "javascript"]})
        
 	// If the link is not in an iframe, put it in one
 	if (doc_url.search(/<iframe/i) == -1) {
-      html_code = '<div style="background-color: #282c34"><pre><code class="language-py">'+doc_url+'</code></pre></div>'
+      html_code = '<div style="background-color: #282c34"><pre><code>'+doc_url+'</code></pre></div>'
       //html_code = '<div>'+text1+'</div>'
       //html_code = '<iframe id = "github-iframe" src="'+text1+'" style="border:0" width="800" height="600" frameborder="0" scrolling="auto"></iframe>'
 	  //html_code = '<div src="http://gist-it.appspot.com/https://github.com/ileathan/hubot-mubot/blob/master/src/mubot.coffee"><\div>'
